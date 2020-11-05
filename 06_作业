@@ -1,0 +1,60 @@
+#练习
+
+#6-1
+
+#1
+multiples_of_pi <- new.env()
+multiples_of_pi[["two_pi"]] <- c(2*pi)
+ls(envir=multiples_of_pi)
+ls.str(envir=multiples_of_pi)
+
+#2
+multiples_of_pi <- new.env()
+multiples_of_pi$three_pi <- polyroot(c(3*pi))
+ls(multiples_of_pi)
+ls.str(multiples_of_pi)
+
+
+#3
+multiples_of_pi <- new.env()
+assign("fout_pi", 4*pi,multiples_of_pi)
+ls(multiples_of_pi)
+ls.str(multiples_of_pi)
+
+
+#6-2
+f <- function(x){
+  if (is.finite(x)==TRUE){
+    x <- x%%2
+    if (x <- 0)x <- TRUE
+    else x <- FALSE
+  }
+  
+  else{ 
+    x <- NA
+  }
+  x
+}
+
+f(2)
+
+f(-3)
+
+f(NA)
+
+
+
+
+#6-3
+x <- function(x){
+  x
+}
+w <- function(x){
+  list <- list("args" <- pairlist(x),"body" <- x)
+list
+}
+
+w(x(2))
+w(x(199))
+
+
