@@ -1,0 +1,12 @@
+#练习4-1
+n <- 1:20
+i <- seq.int(1:10)
+i <- n*(n+1)/2
+names(i) <- c(letters[1:20])
+i
+
+#4-2
+a <- c(seq.int(10,0,-1) , seq.int(1:10))
+
+diag(a,nrow = 21,ncol = 21)
+
