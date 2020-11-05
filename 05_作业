@@ -1,0 +1,30 @@
+#练习5-1
+x <- list()
+
+for (n in c(0:9)){
+  t <- c()
+  for (m in c(0:9)){
+    i <- n*10+m
+    if (sqrt(i) %% 1 == 0 )
+    t <- c(t,i)
+  }
+  x <- c(x,list(t))
+}
+x
+
+#5-2
+iris
+l <- data.frame(iris)
+colMeans(l[,1:4])
+
+
+#5-3
+n <- beaver1
+m <- data.frame(id <- 1)
+p <- cbind(n,m)
+
+a <- beaver2
+b <- data.frame(id <- 2)
+q <- cbind(a,b)
+merge(p,q,by = "day",all = TRUE)
+
